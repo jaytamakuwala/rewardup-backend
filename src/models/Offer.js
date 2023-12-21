@@ -6,7 +6,23 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    pointsRequired: {
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    distance: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    items: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    discount: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

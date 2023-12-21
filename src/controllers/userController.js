@@ -1,6 +1,10 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const { User } = require('../models/User');
+const Sequelize = require('sequelize');
+const sequelize = require('../config/db');
+
+const Usermodel = require('../models/User');
+const User = Usermodel(sequelize, Sequelize);
 
 const registerUser = async (req, res) => {
   const { name, phoneNumber, email, password } = req.body;
@@ -39,6 +43,7 @@ const registerUser = async (req, res) => {
       data: newUser,
     });
   } catch (error) {
+    console.log(error)
     res.status(500).send({ message: 'Internal Server Error', error });
   }
 };

@@ -1,4 +1,10 @@
-const { Store } = require("../models/Store");
+
+
+const Sequelize = require('sequelize');
+const sequelize = require('../config/db');
+
+const Storemodel = require('../models/Store');
+const Store = Storemodel(sequelize, Sequelize);
 
 exports.getAllStores = async (req, res) => {
   const { name } = req.params;
