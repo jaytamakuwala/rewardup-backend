@@ -1,8 +1,9 @@
 // config/database.js
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('rewardup_db', 'root', 'su', {
-  host: 'localhost',
+const sequelize = new Sequelize('rewardup_db', 'root', 'EBHC4HBBFBcdc24A53Ge-g5hH4-3BdE5', {
+  host: 'roundhouse.proxy.rlwy.net',
+  port:'23837',
   dialect: 'mysql',
 });
 
